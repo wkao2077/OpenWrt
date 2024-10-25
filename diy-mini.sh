@@ -5,7 +5,7 @@
 
 # 移除要替换的包
 rm -rf feeds/luci/themes/luci-theme-argon
-rm -rf feeds/luci/luci-app-argon-config
+
 
 # Git稀疏克隆，只克隆指定目录到本地
 function git_sparse_clone() {
@@ -18,8 +18,7 @@ function git_sparse_clone() {
 }
 
 # 添加额外插件
-# git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
-# git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/luci-app-netdata
+git_sparse_clone main https://github.com/Lienol/openwrt-package luci-app-filebrowser luci-app-fileassistant
 
 # 科学上网插件
 git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app-ssr-plus
