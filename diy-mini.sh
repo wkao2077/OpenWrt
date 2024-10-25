@@ -18,6 +18,7 @@ function git_sparse_clone() {
 }
 
 # 添加额外插件
+git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 git_sparse_clone main https://github.com/Lienol/openwrt-package luci-app-filebrowser luci-app-fileassistant
 
 # 科学上网插件
