@@ -5,6 +5,7 @@ sed -i 's/192.168.1.1/192.168.1.251/g' package/base-files/files/bin/config_gener
 
 # 移除要替换的包
 rm -rf feeds/luci/themes/luci-theme-argon
+rm -rf feeds/luci/applications/luci-app-argon-config
 
 
 # Git稀疏克隆，只克隆指定目录到本地
