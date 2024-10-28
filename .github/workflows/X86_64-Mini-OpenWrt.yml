@@ -140,10 +140,10 @@ jobs:
       if: steps.compile.outputs.status == 'success'
       run: |
         cd $OPENWRT_PATH/bin/targets/*/*
-        cat config.buildinfo
         echo "KERNEL=$(cat *.manifest | grep ^kernel | cut -d- -f2 | tr -d ' ')" >> $GITHUB_ENV
         rm -rf packages *.buildinfo *.manifest *kernel.bin *rootfs.img.gz profiles.json sha256sums
-        cp $OPENWRT_PATH/.config  $OPENWRT_PATH/bin/targets/x86/64/${{matrix.target}}.config
+        cp $OPENWRT_PATH/.config  $OPENWRT_PATH/bin/targets/x86/64/x86-64.config
+        cat x86-64.config
         rename 's/^/mini-/' *
         echo "FIRMWARE_PATH=$PWD" >> $GITHUB_ENV
 
