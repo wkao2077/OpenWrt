@@ -30,9 +30,8 @@ git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app
 # git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
 
 # Themes
-git clone --depth=1 -b main https://github.com/kenzok78/luci-theme-argone package/luci-theme-argone
-git clone --depth=1 -b main https://github.com/kenzok78/luci-app-argone-config package/luci-app-argone-config
-git clone --depth=1 -b main https://github.com/kenzok78/luci-theme-design package/luci-theme-design
+git clone --depth=1 -b master https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+git clone --depth=1 -b master https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 
 # Alist
 # git clone --depth=1 https://github.com/sbwml/luci-app-alist package/luci-app-alist
