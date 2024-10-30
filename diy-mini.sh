@@ -4,8 +4,8 @@
 # sed -i 's/192.168.1.1/192.168.1.251/g' package/base-files/files/bin/config_generate
 
 # 移除要替换的包
-rm -rf feeds/luci/themes/luci-theme-argon
-rm -rf feeds/luci/applications/luci-app-argon-config
+# rm -rf feeds/luci/themes/luci-theme-argon
+# rm -rf feeds/luci/applications/luci-app-argon-config
 
 
 # Git稀疏克隆，只克隆指定目录到本地
@@ -29,8 +29,8 @@ git clone --depth=1 https://github.com/sirpdboy/luci-app-poweroffdevice package/
 # git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
 
 # Themes
-git clone --depth=1 -b master https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
-git clone --depth=1 -b master https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
+# git clone --depth=1 -b master https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+# git clone --depth=1 -b master https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 
 
 # 更改 Argon 主题背景
