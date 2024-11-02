@@ -14,7 +14,7 @@ env:
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: false
   FIRMWARE_RELEASE: true
-  FIRMWARE_TAG: X86_64
+  FIRMWARE_TAG: x86_64
   TZ: Asia/Shanghai
 
 jobs:
@@ -143,7 +143,7 @@ jobs:
         cd $OPENWRT_PATH/bin/targets/*/*
         echo "KERNEL=$(cat *.manifest | grep ^kernel | cut -d- -f2 | tr -d ' ')" >> $GITHUB_ENV
         rm -rf packages *.buildinfo *.manifest *kernel.bin *rootfs.img.gz profiles.json sha256sums
-        cp $OPENWRT_PATH/.config  $OPENWRT_PATH/bin/targets/x86/64/x86-64.config
+        cp $OPENWRT_PATH/.config x86-64.config
         cat x86-64.config
         rename 's/^/Lean-/' *
         echo "FIRMWARE_PATH=$PWD" >> $GITHUB_ENV
